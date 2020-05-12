@@ -21,5 +21,6 @@
 
 ## Cameron:
 - Added preliminary code to base extension in the Angular project
+- https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/6299db3b98c262c778404a41ecb5a3dd194d1a8a
 - Next Week: Create frontend base extension to hide malicious intent
 
