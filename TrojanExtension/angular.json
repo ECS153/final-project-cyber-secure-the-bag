@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TrojanExtension"
+    }
+  },
+  "defaultProject": "TrojanExtension",
+  "cli": {
+    "analytics": "c0363082-69e5-42fd-b227-53c7a0b6d99c"
+  }
 }
