@@ -1,4 +1,6 @@
 # Milestone 1
+## Video:
+https://github.com/ECS153/final-project-cyber-secure-the-bag/blob/master/Milestone1Video.mp4
 
 ## All:
 - Came up with a proposal and researched the breadth of our ideas. Created proposal.md and submitted.
