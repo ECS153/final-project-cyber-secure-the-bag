@@ -18,8 +18,9 @@ https://github.com/ECS153/final-project-cyber-secure-the-bag/blob/master/Milesto
 - Next Week: Writing back “cleaned” keylogger results to structured database
 
 ## Orli:
-- Implemented naive keylogger to print to console
-- Next Week: Trigger keylogger to send data to database (based on specific page or keywords from html page 
+- Implemented naive javascript keylogger to print to console on click
+-
+- Next Week: Encorporate keylogger into the angular framework in the extension, trigger on certain sites
 
 ## Cameron:
 - Added preliminary code to base extension in the Angular project
