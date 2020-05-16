@@ -8,8 +8,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'TrojanExtension';
-
-  // static foo() {
-  //   console.log("hewwo! this is a creepy word");
-  // }
 }
