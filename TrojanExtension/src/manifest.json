@@ -1,17 +1,26 @@
 {
- "manifest_version": 2,
- "name": "The Trojan Extension",
- "description": "Definitely not malicious ;)",
- "version": "1.0",
- "browser_action": {
- "default_icon": "icon.png",
- "default_popup": "index.html"
- },
- "permissions": [],
- "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
- "web_accessible_resources": [
- "assets/css/*",
- "assets/js/*",
- "assets/fonts/*"
- ]
+    "manifest_version": 2,
+    "name": "The Trojan Extension",
+    "description": "Definitely not malicious ;)",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "webNavigation"
+    ],
+    "page_action": {
+        "default_icon": "icon.png",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": [
+            "background-es2015.js", //TODO: might need to change name
+            "runtime-es2015.js"
+        ]
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "web_accessible_resources": [
+        "assets/css/*",
+        "assets/js/*",
+        "assets/fonts/*"
+    ]
 }
