@@ -1,17 +1,43 @@
-<h1>This is a website that needs an account</h1>
-<p>This is the sign up page:</p>
-<form action="/action_page.php">
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" name="fname"><br><br>
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" name="lname"><br><br>
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="lname"><br><br>
-    <label for="uname">Username:</label>
-    <input type="text" id="uname" name="lname"><br><br>
-    <label for="pword">Password:</label>
-    <input type="text" id="pword" name="lname"><br><br>
-    <label for="cpword">Confirm Password:</label>
-    <input type="text" id="cpword" name="lname"><br><br>
-    <input type="submit" value="Submit">
-</form>
+<head>
+    <Title>Popup</Title>
+    <link href="https://fonts.googleapis.com/css?family=Jost" rel="stylesheet">
+    <style>
+        body {
+            min-width:225px;
+            font-family: 'Jost', sans-serif;
+        }
+        .text {
+            font-weight: bold;
+        }
+        .blue {
+            color: blue;
+        }
+        .red {
+            color: red);
+        }
+        .yellow {
+            color: yellow;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<h3>Color Coding:</h3>
+
+<div><span class="blue text">Blue</span> - Currently in your schedule</div>
+<div><span class="red text">Red</span> - Conflicts with one of your classes</div>
+<div><span class="yellow text">Yellow</span> - Does not conflict, but is full</div>
+<div><span class="green text">Green</span> - Fits in your schedule</div>
+
+<p>
+    Each professor's name now links directly to their rate my professor page!
+</p>
+<p>
+    Hover over the name of a red class to see what it conflicts with
+</p>
+<p id="explicit">
+    Please note: That by downloading this extension you allow the right for this extension to read and write page data. Nothing is safe :)
+</p>
+</body>
