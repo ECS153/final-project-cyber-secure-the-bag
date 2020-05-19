@@ -1,3 +1,4 @@
+var site = null;
 var keys = "";
 var selectedText = null;
 var copiedText = null;
@@ -9,7 +10,22 @@ window.onbeforeunload = function() {
     console.log(keys);   
     keys = "";
 }
-  
+
+chrome.runtime.onMessage.addListener(
+    function(request) {
+     site = request.site;
+    });
+
+
+// var inputs = document.getElementsByTagName("input");
+
+// for(var i = 0; i < inputs.length; i++) {
+//     inputs[i].addEventListener("click", function(){
+//         console.log("clicked name "+ this.name + ", text" + keys);
+//         // console.log(chrome.tabs.get(0).url);
+//      });
+// }
+
 document.onkeypress = function(event) {
     var keyCode = event.keyCode;
     var key = String.fromCharCode(keyCode)
