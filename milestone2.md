@@ -28,6 +28,6 @@
 - Next Week: Make keylogger active on signup pages only (for Google, Facebook, Amazon...), associate logged data to HTML sign up form elements and add that to the keylog data 
 
 ## Cameron:
-- 
-- 
+- rewrote app.component.html to reflect the popup window of schedule builder. Displays features of the Trojan part of the app as well as an explicit message stating data is being read
+- https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/946b45ccc456d5ea31ee6517993a4d6ae12ad860
 - Next Week:
