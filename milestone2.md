@@ -13,10 +13,9 @@
 - Next Week:
 
 ## Trevor:
--
-- 
-- 
-- Next Week:
+- Created seperate TrojanApp in order to view and manipulate the database as needed from the attacker's perspective. This gives us the potential to parse potentially vast and messy data as needed: https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/e421d8025e7e08299744d5091ede1ee150a85b2c
+- Worked on design document for design of data
+- Next Week: come up with parsing and statistical analysis for finding likely password and username for each domain.
 
 ## Orli:
 - This Week: 
