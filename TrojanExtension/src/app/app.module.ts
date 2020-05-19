@@ -6,10 +6,12 @@ import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
       AppComponent,
+      PopupComponent,
   ],
   imports: [
       BrowserModule,
