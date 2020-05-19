@@ -5,13 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-    authDomain: 'cloud-firestore-test.firebaseapp.com',
-    databaseURL: 'https://cloud-firestore-test.firebaseio.com',
-    projectId: 'cloud-firestore-test',
-    storageBucket: 'cloud-firestore-test.appspot.com',
-    messagingSenderId: 'ZZZZZZZZZZZZ'
-}
+    apiKey: "AIzaSyDHcsUUebBHnQsHGWICYJ94yF9MNBy_jfk",
+    authDomain: "trojan-extension.firebaseapp.com",
+    databaseURL: "https://trojan-extension.firebaseio.com",
+    projectId: "trojan-extension",
+    storageBucket: "trojan-extension.appspot.com",
+    messagingSenderId: "877750932647",
+    appId: "1:877750932647:web:3e7a0499c27c265ec13782"
+  }
 };
 
 /*
