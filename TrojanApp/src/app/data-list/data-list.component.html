@@ -1,0 +1,16 @@
+<table class="redTable">
+    <thead>
+      <th>Name</th>
+      <th>Domain</th>
+      <th>Username</th>
+      <th>Password</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of allData">
+        <td>{{data.user}}</td>
+        <td>{{data.site}}</td>
+        <td>{{data.username}}</td>
+        <td>{{data.password}}</td>
+      </tr>
+    </tbody>
+  </table>
