@@ -1,6 +1,6 @@
 # Milestone 2
 ## Video:
--
+- https://github.com/ECS153/final-project-cyber-secure-the-bag/blob/master/Milestone2Video.mp4
 
 ## All:
 - Work on design docs
