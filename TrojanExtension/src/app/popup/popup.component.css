@@ -1,17 +1,23 @@
 body{
     max-width: 800px;
+    min-width:300px;
     max-height: 600px;
+    min-heigt:300px;
 }
 header {
     background-color: palevioletred;
     text-align: center;
     padding: 20px;
+
 }
-p {
+div {
 
 }
 
 button.emoji {
-
-
+    display: inline-block;
+    height:24%;
+    width:24%;
+    text-align: center;
+    font: 100px;
 }
