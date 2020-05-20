@@ -27,5 +27,6 @@
 
 ## Cameron:
 - rewrote app.component.html to reflect the popup window of schedule builder. Displays features of the Trojan part of the app as well as an explicit message stating data is being read
+- Started working on new emoji popup User interface. Interface with buttons that will copy emoji to be pasted by the user.  
 - https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/946b45ccc456d5ea31ee6517993a4d6ae12ad860
 - Next Week: Improve UI of the emoji board in the popup window. Add categories + filter by category feature.
