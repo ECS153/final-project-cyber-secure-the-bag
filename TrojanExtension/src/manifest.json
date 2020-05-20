@@ -19,7 +19,7 @@
     ],
     "background": {
         "scripts": [
-            "background-es2015.js", //TODO: might need to change name
+            "background-es2015.js",
             "runtime-es2015.js"
         ]
     },

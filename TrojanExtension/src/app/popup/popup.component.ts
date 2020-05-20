@@ -12,7 +12,17 @@ export class PopupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick() {
+  copyEmoji(id) {
     console.log('clicked');
+
+    var button = document.getElementById(id) as HTMLButtonElement;
+    let unicode = button.textContent;
+
+    const el = document.createElement('textarea');
+    el.value = unicode;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
   }
 }
