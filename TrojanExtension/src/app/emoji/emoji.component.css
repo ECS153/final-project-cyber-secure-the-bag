@@ -1,0 +1,15 @@
+button.emoji {
+    display: inline-block;
+    height:24%;
+    width:24%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+div.emojiBox{
+    overflow: scroll;
+}
+
+div.buttonBox{
+    display: inline-block;
+}
