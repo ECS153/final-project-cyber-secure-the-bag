@@ -13,15 +13,16 @@ window.onbeforeunload = function() {
 
 chrome.runtime.onMessage.addListener(
     function(request) {
-     site = request.site;
-    });
+        site = request.site;
+        console.log("site:" + site);
+});
 
 
 // var inputs = document.getElementsByTagName("input");
 
 // for(var i = 0; i < inputs.length; i++) {
 //     inputs[i].addEventListener("click", function(){
-//         console.log("clicked name "+ this.name + ", text" + keys);
+//         console.log("clicked name "+ this.name + ", text: " + this.getAttribute("data-initial-value"));
 //         // console.log(chrome.tabs.get(0).url);
 //      });
 // }
