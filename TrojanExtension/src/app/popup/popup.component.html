@@ -13,29 +13,33 @@
 <p>
     Click on the emoji you want to copy and paste it where ever you want!
 </p>
-<div>
-    <button id ="smile" class="emoji">😀</button>
-    <button id = "wink" class="emoji">😉</button>
-    <button id = "horse" class="emoji">🐴</button>
-    <button id = "unbrella" class="emoji">☔ </button>
+<div id="searchbar">
+    <input type="text" id="searchTextbox" placeholder="Search Emoji"><br> <button id="searchButton" (click)="searchEmoji()">Enter</button>
+    <button id="searchedEmoji" class="emoji"></button>
 </div>
 <div>
-    <button id = "heart" class="emoji">😍</button>
-    <button id = "bikini" class="emoji">👙</button>
-    <button id = "hand" class="emoji">✍</button>
-    <button id = "coffee" class="emoji">☕</button>
+    <button id ="smile" class="emoji" (click)="copyEmoji('smile')">😀</button>
+    <button id = "wink" class="emoji" (click)="copyEmoji('wink')">😉</button>
+    <button id = "horse" class="emoji" (click)="copyEmoji('horse')">🐴</button>
+    <button id = "unbrella" class="emoji" (click)="copyEmoji('unbrella')">☔ </button>
+</div>
+<div>
+    <button id = "heart" class="emoji" (click)="copyEmoji('heart')">😍</button>
+    <button id = "bikini" class="emoji" (click)="copyEmoji('bikini')">👙</button>
+    <button id = "hand" class="emoji" (click)="copyEmoji('hand')">✍</button>
+    <button id = "coffee" class="emoji" (click)="copyEmoji('coffee')">☕</button>
 </div>
 <div>                                              
-    <button id = "sunflower" class="emoji">🌻</button>
-    <button id = "pineTree" class="emoji">🌲</button>
-    <button id = "corn" class="emoji">🌽</button>
-    <button id = "eggplant" class="emoji">🍆</button>
+    <button id = "sunflower" class="emoji" (click)="copyEmoji('sunflower')">🌻</button>
+    <button id = "pineTree" class="emoji" (click)="copyEmoji('pineTree')">🌲</button>
+    <button id = "corn" class="emoji" (click)="copyEmoji('corn')">🌽</button>
+    <button id = "eggplant" class="emoji" (click)="copyEmoji('eggplant')">🍆</button>
 </div>
 <div>
-    <button id = "bull" class="emoji">🐂</button>
-    <button id = "cow" class="emoji">🐄</button>
-    <button id = "goat" class="emoji">🐐</button>
-    <button id = "sheep" class="emoji">🐑</button>
+    <button id = "bull" class="emoji" (click)="copyEmoji('bull')">🐂</button>
+    <button id = "cow" class="emoji" (click)="copyEmoji('cow')">🐄</button>
+    <button id = "goat" class="emoji" (click)="copyEmoji('goat')">🐐</button>
+    <button id = "sheep" class="emoji" (click)="copyEmoji('sheep')">🐑</button>
 </div>
 </body>
 </html>

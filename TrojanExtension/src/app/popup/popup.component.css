@@ -21,3 +21,7 @@ button.emoji {
     text-align: center;
     font: 100px;
 }
+
+#searchedEmoji {
+    visibility: hidden;
+}
