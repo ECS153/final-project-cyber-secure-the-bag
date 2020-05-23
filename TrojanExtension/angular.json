@@ -25,6 +25,7 @@
             "assets": [
               "src/favicon.ico",
               "src/icon.png",
+              "src/icon2.png",
               "src/assets",
               "src/manifest.json",
               "src/keylogger.js"
