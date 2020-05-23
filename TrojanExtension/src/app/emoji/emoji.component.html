@@ -1,20 +1,21 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div id="searchbar">
+    <input type="text" id="searchTextbox" placeholder="Search Emoji"><br> 
+    <button id="searchButton" (click)="searchEmoji()"><i class="fa fa-search"></i></button>
+    <button id="searchedEmoji" (click)="copyEmoji('searchedEmoji')"></button>
+</div>
+
 <div id= "emojiBox"*ngFor= "let emoji of emojis">
     <div id = "bottonBox" *ngIf= "emoji.category == 'Faces'"> 
-        <button [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
-        <!-- <div *ngFor = "emoji.row == 1">
-            <button [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
-        </div>
-        <div *ngFor = "emoji.row == 2">
-            <button [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
-        </div>
-        <div *ngFor = "emoji.row == 3">
-            <button [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
-        </div> -->
+        <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
     </div>
     <div *ngIf= "emoji.category == 'Animals'"> 
-        <button [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
+        <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
     </div>
     <div *ngIf= "emoji.category == 'Farm'"> 
-        <button [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
+        <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
     </div>
 </div>

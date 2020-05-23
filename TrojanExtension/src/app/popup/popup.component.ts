@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HostListener } from '@angular/core';
-import { Key } from 'ts-keycode-enum';
-
 
 @Component({
     selector: 'app-popup',
@@ -12,23 +9,9 @@ export class PopupComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit(): void {
-    }
+    ngOnInit(): void { }
 
-    // copyEmoji(id) {
-    //     console.log('clicked');
-    //     var button = document.getElementById(id) as HTMLButtonElement;
-    //     let unicode = button.textContent;
-
-    //     const el = document.createElement('textarea');
-    //     el.value = unicode;
-    //     document.body.appendChild(el);
-    //     el.select();
-    //     document.execCommand('copy');
-    //     document.body.removeChild(el);
-    // }
-
-    openTab(cityName) {
+    openTab(cityName : string) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
