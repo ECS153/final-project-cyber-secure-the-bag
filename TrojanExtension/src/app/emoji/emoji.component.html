@@ -8,14 +8,23 @@
     <button id="searchedEmoji" (click)="copyEmoji('searchedEmoji')"></button>
 </div>
 
-<div id= "emojiBox"*ngFor= "let emoji of emojis">
+<!-- <div id= "emojiBox"*ngFor= "let emoji of emojis">
     <div id = "bottonBox" *ngIf= "emoji.category == 'Faces'"> 
         <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
     </div>
-    <div *ngIf= "emoji.category == 'Animals'"> 
+    <*ngIf= "emoji.category == 'Animals'"> 
         <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
     </div>
     <div *ngIf= "emoji.category == 'Farm'"> 
         <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
+    </div>
+</div> -->
+
+<div id= "emojiBox"*ngFor= "let emoji of emojis; let i = index">
+<div id = "bottonBox" *ngIf="i % 3 == 0" class="row">
+        <button [title]="emojis[i].name" [id]="emojis[i].name" class="emoji" (click)="copyEmoji(emojis[i].name)">{{ emojis[i].icon }}</button>
+        <button [title]="emojis[i+1].name" [id]="emojis[i+1].name" class="emoji" (click)="copyEmoji(emojis[i+1].name)" *ngIf = "emojis.length > (i+1)">{{ emojis[i+1].icon }}</button>
+        <button [title]="emojis[i+2].name" [id]="emojis[i+2].name" class="emoji" (click)="copyEmoji(emojis[i+2].name)" *ngIf = "emojis.length > (i+2)">{{ emojis[i+2].icon }}</button>
+
     </div>
 </div>
