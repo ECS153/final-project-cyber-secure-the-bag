@@ -8,14 +8,13 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { PopupComponent } from './popup/popup.component';
 import { EmojiComponent } from './emoji/emoji.component';
-import { CategoryComponent } from './category/category.component';
+
 
 @NgModule({
   declarations: [
       AppComponent,
       PopupComponent,
       EmojiComponent,
-      CategoryComponent,
   ],
   imports: [
       BrowserModule,
