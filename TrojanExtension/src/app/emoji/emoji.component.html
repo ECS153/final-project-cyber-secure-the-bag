@@ -8,12 +8,13 @@
     <button id="searchButton" (click)="searchEmoji()"><i class="fa fa-search"></i></button>
     <button id="searchedEmoji" (click)="copyEmoji('searchedEmoji')"></button>
 </div>
+<button id="autocomplete" (click)="autocompleteEmoji()">autocomplete</button>
 
 
 
 
 <div class="tab">
-    <div class = "scroller">
+    <div class="scroller">
         <button class="tablinks active" (click)="openTab('All')">All</button>
         <button class="tablinks" (click)="openTab('Go Ags')">Go Ags</button>
         <button class="tablinks" (click)="openTab('FarMar')">FarMar</button>

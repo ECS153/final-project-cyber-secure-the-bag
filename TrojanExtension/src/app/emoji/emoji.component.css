@@ -11,7 +11,7 @@ button.emoji {
     background: #DCDCDC;
 }
 
-div.emojiBox{
+div.emojiBox {
     overflow: scroll;
 }
 
@@ -77,23 +77,19 @@ div.buttonBox{
 
 /* Style the tab */
 .tab {
-    max-width: 290px;
-    /* max-height: 50px; */
+    max-width: 300px;
     display: flex;
-    flex-wrap: scroll;
-    overflow-x: auto;
-    overflow: hidden;
+    overflow-x: scroll;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    white-space:nowrap
+    white-space: nowrap;
 }
 
 .scoller {
-    max-width: 290px;
-    /* max-height: 50px; */
     overflow-x: scroll;
     overflow-y: hidden;
-    display:inline-block
+    width: 300px;
+    white-space: nowrap;
 }
 
 
@@ -103,11 +99,9 @@ div.buttonBox{
 }
 
 
-
 /* Style the buttons inside the tab */
 .tab button {
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
@@ -116,7 +110,6 @@ div.buttonBox{
     font-size: 12px;
     flex: 0 0 auto;
     display:inline-block
-    
 }
 
 
@@ -147,19 +140,12 @@ img {
 
 body{
     max-width: 280px;
-    min-width:280px;
+    min-width: 280px;
     max-height: 500px;
     min-height:300px;
 }
-header {
-    max-height: 100px;
-    background-color: palevioletred;
-    text-align: center;
-    padding: 20px;
-
-}
-div{
-    height: 60%px;
+div {
+    height: 60%;
 }
 
 
@@ -169,5 +155,5 @@ div{
     max-height: 215px;
     overflow-y: auto;
     max-width: 250px;
-  }
+}
 
