@@ -1,12 +1,12 @@
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.webNavigation.onCompleted.addListener(() => {
-        chrome.tabs.query({ active: true, currentWindow: true },function(tabs) {
-            if(tabs[0]) {chrome.tabs.sendMessage(tabs[0].id,"active");}
+// chrome.runtime.onInstalled.addListener(() => {
+//     chrome.webNavigation.onCompleted.addListener(() => {
+//         chrome.tabs.query({ active: true, currentWindow: true },function(tabs) {
+//             if(tabs[0]) {chrome.tabs.sendMessage(tabs[0].id,{from: "background"});}
             
-        });
-    }, { url: [{ urlMatches: 'google.com|facebook.com|amazon.com' } ] });
+//         });
+//     }, { url: [{ urlMatches: 'messenger.com' } ] });
 
-});
+// });
 
 chrome.runtime.onMessage.addListener(
     function(request, sender) {
