@@ -59,6 +59,16 @@ export class EmojiComponent implements OnInit {
     searchTextbox.value = null;
   }
 
+  autocompleteEmoji() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      if (tabs[0]) {
+        chrome.tabs.sendMessage(tabs[0].id, emojis, function(response) {
+          console.log(response.farewell);
+        });
+      }
+    });
+  }
+
   openTab(category : string) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
