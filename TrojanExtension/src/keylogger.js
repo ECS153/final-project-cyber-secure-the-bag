@@ -7,14 +7,19 @@ var copiedText = null;
 const BACKSPACE = 8;
 const ENTER = 13;
 
-chrome.runtime.onMessage.addListener(
-    function(request) {
-        logger.site = request.site;
-});
+// chrome.runtime.onMessage.addListener(
+//     function(request) {
+//         console.log("active before:" + active);
+//         console.log(request);
+//         if(request != null)
+//             active = true;
+//         console.log("active after:" + active);
+// });
 
 window.onbeforeunload = function() {
-    var jsonString= JSON.stringify(logger);
-    console.log(jsonString);
+    chrome.runtime.sendMessage(logger);
+    // var jsonString= JSON.stringify(logger);
+    // console.log(jsonString);
 }
 
 document.onload = function() {
