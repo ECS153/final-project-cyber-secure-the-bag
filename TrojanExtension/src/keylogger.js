@@ -7,14 +7,17 @@ var copiedText = null;
 const BACKSPACE = 8;
 const ENTER = 13;
 
+// BEGIN: AUTOCOMPLETE FEATURE - CHROME EXTENSION
 chrome.runtime.onMessage.addListener(
-    function(request) {
-        logger.site = request.site;
-});
+    function(request, sender) {
+        console.log(request);
+    }
+);
+// END: AUTOCOMPLETE FEATURE - CHROME EXTENSION
 
 window.onbeforeunload = function() {
-    var jsonString= JSON.stringify(logger);
-    console.log(jsonString);
+    if(chrome.runtime)
+        chrome.runtime.sendMessage(logger);
 }
 
 document.onload = function() {
