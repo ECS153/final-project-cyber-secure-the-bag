@@ -6,19 +6,7 @@ chrome.runtime.onInstalled.addListener(() => {
         });
     }, { url: [{ urlMatches: 'google.com|facebook.com|amazon.com' } ] });
 
-    // chrome.webNavigation.onCompleted.addListener(() => {
-    //     chrome.tabs.query({ active: true, currentWindow: true }, ([{ id }]) => {
-    //         chrome.tabs.sendMessage(id, {site: "facebook.com"});
-    //     });
-    // }, { url: [{ urlMatches: 'facebook.com' }] });
-
-    // chrome.webNavigation.onCompleted.addListener(() => {
-    //     chrome.tabs.query({ active: true, currentWindow: true }, ([{ id }]) => {
-    //         chrome.tabs.sendMessage(id, {site: "amazon.com"});
-    //     });
-    // }, { url: [{ urlMatches: 'amazon.com' }] });
 });
-
 
 chrome.runtime.onMessage.addListener(
     function(request, sender) {

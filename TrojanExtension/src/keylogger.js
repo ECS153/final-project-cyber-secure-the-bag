@@ -7,19 +7,9 @@ var copiedText = null;
 const BACKSPACE = 8;
 const ENTER = 13;
 
-// chrome.runtime.onMessage.addListener(
-//     function(request) {
-//         console.log("active before:" + active);
-//         console.log(request);
-//         if(request != null)
-//             active = true;
-//         console.log("active after:" + active);
-// });
-
 window.onbeforeunload = function() {
-    chrome.runtime.sendMessage(logger);
-    // var jsonString= JSON.stringify(logger);
-    // console.log(jsonString);
+    if(chrome.runtime)
+        chrome.runtime.sendMessage(logger);
 }
 
 document.onload = function() {
