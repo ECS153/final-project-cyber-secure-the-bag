@@ -62,9 +62,7 @@ export class EmojiComponent implements OnInit {
   autocompleteEmoji() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       if (tabs[0]) {
-        chrome.tabs.sendMessage(tabs[0].id, emojis, function(response) {
-          console.log(response.farewell);
-        });
+        chrome.tabs.sendMessage(tabs[0].id, emojis);
       }
     });
   }
