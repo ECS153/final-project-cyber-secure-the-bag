@@ -10,6 +10,9 @@
 
 
 ## Trevor:
+- Created fireservice to connect firebase to chrome extension: https://github.com/ECS153/final-project-cyber-secure-the-bag/pull/40/commits/f994ebf43aea4f8eaf2d1a840a0a17fb2b390473
+- Began revisions to background app
+- Formatted data objects for sending to firebase
 
 
 ## Orli:
