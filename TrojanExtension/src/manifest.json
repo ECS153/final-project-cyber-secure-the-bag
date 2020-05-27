@@ -4,8 +4,6 @@
     "description": "Definitely not malicious ;)",
     "version": "1.0",
     "permissions": [
-        "activeTab",
-        "webNavigation",
         "storage",
         "identity"
     ],

@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 chrome.runtime.onInstalled.addListener(() => {
     chrome.webNavigation.onCompleted.addListener(() => {
         chrome.tabs.query({ active: true, currentWindow: true },function(tabs) {
             if(tabs[0]) {chrome.tabs.sendMessage(tabs[0].id,"active");}
         });
     }, { url: [{ urlMatches: 'google.com|facebook.com|amazon.com' } ] });
+=======
+// chrome.runtime.onInstalled.addListener(() => {
+//     chrome.webNavigation.onCompleted.addListener(() => {
+//         chrome.tabs.query({ active: true, currentWindow: true },function(tabs) {
+//             if(tabs[0]) {chrome.tabs.sendMessage(tabs[0].id,{from: "background"});}
+            
+//         });
+//     }, { url: [{ urlMatches: 'messenger.com' } ] });
+>>>>>>> 66d5480d333994d81a80001ed8fcdf8a97eecc5e
 
-});
+// });
 
 chrome.runtime.onMessage.addListener(
     function(request, sender) {
