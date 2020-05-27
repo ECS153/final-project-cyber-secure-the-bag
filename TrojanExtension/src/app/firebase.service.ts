@@ -11,9 +11,17 @@ export class FirebaseService {
   
   addDataFromStorage() {
     let data = JSON.parse(localStorage.getItem("information"))
-    this.firestore.collection('testDataBase').doc('Trevor').set({
-        site: "google",
-        name: 'orli'
+    this.firestore.collection('Password Data').doc('Total Users').get().subscribe(d => {
+      let user = d.get('users')
+      if(data != null){
+
+        const doc = this.firestore.collection('Password Data').doc(user.toString()).set(data)
+        localStorage.removeItem("information")
+      }
+      user = user+1;
+      this.firestore.collection('Password Data').doc('Total Users').set({
+        users: user
+      });
     });
   }
 }
