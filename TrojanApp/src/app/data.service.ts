@@ -10,7 +10,7 @@ export class DataService {
   constructor(private firestore: AngularFirestore) { }
 
   getData() {
-    return this.firestore.collection('testDataBase').snapshotChanges();
+    return this.firestore.collection('Password Data').snapshotChanges();
   }
 }
 

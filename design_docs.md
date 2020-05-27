@@ -14,3 +14,5 @@ https://docs.google.com/document/d/1XLsiynsLPoVSgy27iDUA0_tKnVVd3Iq94K0qvEN5Vis/
 
 ## Trojan Application
 
+This application is used to view data extracted from the keylogger. Information on data formation, storage and connection to firebase, as well as the functionality of the application can be found here: https://docs.google.com/document/d/1eUKEAmZp0SsX4yvZh4u06ZRbdBfBVh-ZTGl-az7Fkbg/edit?usp=sharing.
+

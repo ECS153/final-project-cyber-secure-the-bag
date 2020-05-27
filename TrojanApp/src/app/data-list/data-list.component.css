@@ -12,12 +12,15 @@ table.redTable {
   table.redTable tbody td {
     font-size: 19px;
   }
-  table.redTable tr:nth-child(even) {
+
+  table.redTable tbody:nth-child(even) {
     background: #F5C8BF;
   }
+
   table.redTable thead {
     background: #A40808;
   }
+
   table.redTable thead th {
     font-size: 19px;
     font-weight: bold;
