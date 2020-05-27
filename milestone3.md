@@ -3,10 +3,14 @@
 - 
 
 ## All:
-- Revise on design docs
+- Revise design docs
 
 ## Shivani:
-- 
+- Updated styling of UI in Chrome Extension popup
+- Added search bar and search for emoji feature to Chrome Extension popup
+- Began working on an autocomplete feature
+- https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/fe2e25f2b9c04345d66483556c0582562e8cf0b0
+- https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/9eed6e9c1b9b1478e7551c7dafb5f0815cffa75e
 
 
 ## Trevor:
