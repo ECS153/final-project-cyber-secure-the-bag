@@ -16,8 +16,9 @@
 
 
 ## Orli:
-- updated code to send keylogged data from content script to background script on page unload, and associate URL with the keylogged data in the background script (so that it can be easily sent to our database): https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/e0d160002c994cf03511a3f11fcebaa304903a25
-- added logic in keylogger.js to replace text with emojis when the autocomplete function is set to true
+- updated keylogger to save an Object which maps an HTML element to the corresponding keylogged text  https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/e0d160002c994cf03511a3f11fcebaa304903a25
+- updated code to associate URL with the keylogger Object in the background script 
+- started adding logic in keylogger.js to replace text with emojis when the autocomplete function is set to true
 - made content script active on all HTTPS sites
 
 
