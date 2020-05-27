@@ -1,10 +1,10 @@
 button.emoji {
     display: inline-block;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     margin: 3px;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 15px;
 }
 
 .emoji:hover {
@@ -69,6 +69,7 @@ div.buttonBox{
     visibility: hidden;
     margin-left: 10px;
     padding: 10px;
+    cursor: pointer;
 }
 
 #searchedEmoji:hover{
@@ -92,12 +93,10 @@ div.buttonBox{
     white-space: nowrap;
 }
 
-
 .tablinks {
     flex: 0 0 auto;
     display:inline-block
 }
-
 
 /* Style the buttons inside the tab */
 .tab button {
@@ -111,8 +110,6 @@ div.buttonBox{
     flex: 0 0 auto;
     display:inline-block
 }
-
-
 
 /* Change background color of buttons on hover */
 .tab button:hover {
@@ -131,7 +128,6 @@ div.buttonBox{
     border: 1px solid #ccc;
     border-top: none;
 }
-
 
 img {
     max-width: 100%;
@@ -156,4 +152,3 @@ div {
     overflow-y: auto;
     max-width: 250px;
 }
-

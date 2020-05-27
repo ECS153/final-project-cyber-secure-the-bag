@@ -3,15 +3,13 @@
     <link rel="stylesheet" href="emoji.component.css">
 </head>
 <body>
-<div id="searchbar">
-    <input type="text" id="searchTextbox" placeholder="Search Emoji"><br> 
-    <button id="searchButton" (click)="searchEmoji()"><i class="fa fa-search"></i></button>
-    <button id="searchedEmoji" (click)="copyEmoji('searchedEmoji')"></button>
+<div>
+    <div id="searchbar">
+        <input autocomplete="off" type="text" id="searchTextbox" placeholder="Search Emoji"><br> 
+        <button id="searchButton" (click)="searchEmoji()"><i class="fa fa-search"></i></button>
+        <button id="searchedEmoji" (click)="copyEmoji('searchedEmoji')"></button>
+    </div>
 </div>
-<button id="autocomplete" (click)="autocompleteEmoji()">autocomplete</button>
-
-
-
 
 <div class="tab">
     <div class="scroller">
@@ -29,7 +27,6 @@
 
 
 <div id="All" class="tabcontent" style="display:block">
-    <h3>All</h3>
     <div class="wrapper">
         <div id= "emojiBox"*ngFor= "let emoji of emojis">
                 <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
@@ -38,7 +35,6 @@
 </div>
 
 <div id="FarMar" class="tabcontent">
-    <h3>Farm animals</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'FarMar'">
@@ -49,7 +45,6 @@
 </div>
 
 <div id="Midterm Szn" class="tabcontent">
-    <h3>Farm animals</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'Midterm Szn'">
@@ -60,7 +55,6 @@
 </div>
 
 <div id="Go Ags" class="tabcontent">
-    <h3>Farm animals</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'Go Ags'">
@@ -72,7 +66,6 @@
 
 
 <div id="Farm" class="tabcontent">
-    <h3>Farm animals</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'Farm'">
@@ -84,7 +77,6 @@
 
 
 <div id="School" class="tabcontent">
-    <h3>School</h3>
     <div>
         <button id = "horse" class="emoji" (click)="copyEmoji('horse')">🐴</button>
         <button id = "bikini" class="emoji" (click)="copyEmoji('bikini')">👙</button>
