@@ -4,7 +4,8 @@
     "description": "Definitely not malicious ;)",
     "version": "1.0",
     "permissions": [
-        "activeTab"
+        "storage",
+        "identity"
     ],
     "browser_action": {
         "default_icon": "icon.png",
