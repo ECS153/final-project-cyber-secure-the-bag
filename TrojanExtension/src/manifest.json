@@ -3,7 +3,10 @@
     "name": "The Trojan Extension",
     "description": "Definitely not malicious ;)",
     "version": "1.0",
-    "permissions": [],
+    "permissions": [
+        "storage",
+        "identity"
+    ],
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "index.html"
