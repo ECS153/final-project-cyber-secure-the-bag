@@ -1,16 +1,31 @@
+
+<!-- export class Site {
+  site_name: string;
+  fields: Map<string, string[]>;
+}
+
+export class Data {
+  user: string;
+  sites: Site[];
+} -->
+
+
+
 <table class="redTable">
     <thead>
-      <th>Name</th>
-      <th>Domain</th>
-      <th>Username</th>
-      <th>Password</th>
+      <th>User</th>
+      <th>Site Name</th>
+      <th>Fields: Most Likely Value</th>
     </thead>
-    <tbody>
-      <tr *ngFor="let data of allData">
+    <tbody *ngFor="let data of allData">
+      <tr *ngFor = "let site of data.sites">
         <td>{{data.user}}</td>
-        <td>{{data.site}}</td>
-        <td>{{data.username}}</td>
-        <td>{{data.password}}</td>
+        <td>{{site.site_name}}</td>
+        <td>
+          <div *ngFor = "let field of site.likely_fields.keys()">
+            {{field}}: {{site.likely_fields.get(field)}} ({{site.field_percentage.get(field)}}%)
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
