@@ -19,4 +19,6 @@
 
 
 ## Cameron:
-
+- Continuted to work on Chrome extenion User Interface. Added tab function to choose categories of emoji. Worked on the HTMl and CSS. Used - Angular template to display emoji in a grid fashion. Tweeked the display. Added scroll function to display. Added more emojis to emoji database. 
+- https://github.com/ECS153/final-project-cyber-secure-the-bag/commit/a86531ba13286a128ea15f16b79efd4389590e53
+-todo: clean up popup and get final version
