@@ -5,6 +5,7 @@ button.emoji {
     margin: 3px;
     cursor: pointer;
     font-size: 15px;
+    
 }
 
 .emoji:hover {

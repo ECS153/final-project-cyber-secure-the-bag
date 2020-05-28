@@ -83,7 +83,7 @@
     <h3>Davis Disasters</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
-            <div *ngIf = "emoji.category == 'Davis Disasters'">
+            <div *ngIf = "emoji.category == 'DD'">
                 <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
             </div>
         </ng-container>
