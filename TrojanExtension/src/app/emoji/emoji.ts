@@ -32,37 +32,37 @@ export const emojis = [
     {
       name: 'horse',
       icon: '🐴',
-      category: 'Animals',
+      category: 'FarMar',
     },
     {
       name: 'pig',
       icon: '🐖',
-      category: 'Animals',
+      category: 'FarMar',
     },
     {
       name: 'goat',
       icon: '🐐',
-      category: 'Animals',
+      category: 'FarMar',
     },
     {
       name: 'Sheep',
       icon: '🐑',
-      category: 'Animals',
+      category: 'FarMar',
     },
     {
       name: 'Corn',
       icon: '🌽',
-      category: 'Farm',
+      category: 'FarMar',
     },
     {
       name: 'Tomato',
       icon: '🍅',
-      category: 'Farm',
+      category: 'FarMar',
     },
     {
       name: 'Eggplant',
       icon: '🍆',
-      category: 'Farm',
+      category: 'FarMar',
     },
     {
       name: 'rainbow',
