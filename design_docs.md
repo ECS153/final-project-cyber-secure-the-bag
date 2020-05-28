@@ -7,6 +7,9 @@ This document describes the holistic design of our project by focusing on how th
 
 ## Base Chrome Extension (Non-Malicious)
 
+This document describes our non-Malicious Chrome extension.
+https://docs.google.com/document/d/1UpkkLizvWGuZcNVGEmcSFs_dmrs7ggVc3K41IU91KNQ/edit?usp=sharing
+
 ## Keylogger
 
 This document describes how the extension's keylogging scripts interact with the browser to identify websites and collect data.
