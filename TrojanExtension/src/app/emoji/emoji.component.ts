@@ -19,8 +19,10 @@ export class EmojiComponent implements OnInit {
   emojis = emojis;
   lastSearchedEmoji = '';
   autocompleteList;
+  listItems;
   listElement;
   searchQuery;
+  currentSelection = -1;
 
   /*
    * Function to copy emoji to clipboard based on emoji name
@@ -68,15 +70,24 @@ export class EmojiComponent implements OnInit {
     searchTextbox.value = null;
   }
 
+    /*
+   * Function to clear list of autocomplete items
+   */
+  closeAllLists(element) {
+    var x = document.getElementsByClassName("search-autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (element != x[i] && element != this.searchQuery) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+    this.currentSelection = -1;
+  }
+
   /*
    * Adds query elements to autocomplete list when user types in search box
    */
   @HostListener('document:input', ['$event'])
   handleInputEvent(event: InputEvent) { 
-    console.log("sensing input");
-    console.log(event);
-
-    var currentFocus;
     var searchTextbox = document.getElementById('searchTextbox') as HTMLInputElement;
 
     this.searchQuery = searchTextbox.value;
@@ -84,7 +95,6 @@ export class EmojiComponent implements OnInit {
       if (!this.searchQuery) {
         return false;
       }
-      currentFocus = -1;
 
       this.autocompleteList = document.createElement("DIV");
       this.autocompleteList.setAttribute("id", searchTextbox.id + "search-autocomplete-list");
@@ -96,10 +106,8 @@ export class EmojiComponent implements OnInit {
       anchor.parentNode.appendChild(this.autocompleteList);
       emojis.forEach(emoji => {
         if (emoji.name.substr(0, this.searchQuery.length).toLowerCase() == this.searchQuery.toLowerCase()) {
-          console.log("match!");
-
           this.listElement = document.createElement("DIV");
-          this.listElement.setAttribute("style", "background-color: lawngreen; padding: 10px; cursor: pointer; background-color: #fff; border-bottom: 1px solid #d4d4d4; font-size: 12px;");
+          this.listElement.setAttribute("style", "padding: 10px; cursor: pointer; background-color: #fff; border-bottom: 1px solid #d4d4d4; font-size: 12px;");
   
           this.listElement.innerHTML = "<strong>" + emoji.name.substr(0, this.searchQuery.length) + "</strong>";
           this.listElement.innerHTML += emoji.name.substr(this.searchQuery.length);
@@ -115,23 +123,66 @@ export class EmojiComponent implements OnInit {
   }
 
   /*
-   * Function to clear list of autocomplete items
-   */
-  closeAllLists(element) {
-    var x = document.getElementsByClassName("search-autocomplete-items");
-    for (var i = 0; i < x.length; i++) {
-      if (element != x[i] && element != this.searchQuery) {
-        x[i].parentNode.removeChild(x[i]);
-      }
-    }
-  }
-
-  /*
    * Closes and clears autocomplete list when user clicks
    */
   @HostListener('document:click', ['$event'])
   handleClick(event: Event) {
     this.closeAllLists(event.target);
+  }
+
+  removeActive() {
+    for (var i = 0; i < this.listItems.length; i++) {
+      this.listItems[i].setAttribute("style", "padding: 10px; cursor: pointer; background-color: #fff; border-bottom: 1px solid #d4d4d4; font-size: 12px;");
+    }
+  }
+
+  addActive() {
+    if (!this.listItems) {
+      return false;
+    }
+    
+    this.removeActive();
+    this.listItems[this.currentSelection].setAttribute("style", "padding: 10px; cursor: pointer; background-color: DodgerBlue !important; color: #ffffff; border-bottom: 1px solid #d4d4d4; font-size: 12px;");
+  }
+
+  /*
+   * Searches for emoji which has been typed in the search bar when enter was clicked
+   */
+  @HostListener('document:keypress', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.which === Key.Enter) {
+      if (this.currentSelection > -1) {
+        if (this.listItems) 
+          this.listItems[this.currentSelection].click();
+      } else {
+        this.searchEmoji();
+      }
+    }
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeydownEvent(event: KeyboardEvent) {
+    if (event.which === Key.DownArrow) {
+      if (this.autocompleteList) {
+        this.listItems = this.autocompleteList.getElementsByTagName("div") as HTMLCollectionOf<HTMLDivElement>;
+        this.currentSelection++;
+        if (this.currentSelection >= this.listItems.length) {
+          this.currentSelection = 0;
+        }
+        this.addActive();
+      }
+    }
+
+    if (event.which === Key.UpArrow) {
+      if (this.autocompleteList) {
+        this.listItems = this.autocompleteList.getElementsByTagName("div") as HTMLCollectionOf<HTMLDivElement>;
+        this.currentSelection--;
+        if (this.currentSelection < 0) {
+          this.currentSelection = (this.listItems.length - 1);
+        }
+        this.addActive();
+      }
+    } 
   }
 
   openTab(category : string) {
@@ -147,13 +198,4 @@ export class EmojiComponent implements OnInit {
     document.getElementById(category).style.display = "block";
   }
 
-  /*
-   * Searches for emoji which has been typed in the search bar when enter was clicked
-   */
-  @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) { 
-    if (event.which === Key.Enter) {
-      this.searchEmoji();
-    }
-  }
 }

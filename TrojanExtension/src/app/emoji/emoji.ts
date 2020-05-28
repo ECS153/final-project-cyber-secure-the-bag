@@ -47,22 +47,17 @@ export const emojis = [
       category: 'FarMar',
     },
     {
-      name: 'Sheep',
+      name: 'sheep',
       icon: '🐑',
       category: 'FarMar',
     },
     {
-      name: 'Corn',
-      icon: '🌽',
-      category: 'FarMar',
-    },
-    {
-      name: 'Tomato',
+      name: 'tomato',
       icon: '🍅',
       category: 'FarMar',
     },
     {
-      name: 'Eggplant',
+      name: 'eggplant',
       icon: '🍆',
       category: 'FarMar',
     },
@@ -72,7 +67,7 @@ export const emojis = [
       category: 'FarMar'
     },
     {
-      name: 'Hot dog',
+      name: 'hotdog',
       icon: '🌭',
       category: 'FarMar'
     },
@@ -87,7 +82,7 @@ export const emojis = [
       category: 'FarMar'
     },
     {
-      name: 'Pizza',
+      name: 'pizza',
       icon: '🍕',
       category: 'FarMar'
     },
@@ -97,7 +92,7 @@ export const emojis = [
       category: 'FarMar'
     },
     {
-      name: 'Family',
+      name: 'family',
       icon: '👪',
       category: 'FarMar'
     },
@@ -106,32 +101,27 @@ export const emojis = [
       icon: '💵',
       category: 'FarMar'
     },
+    {
+      name: 'music',
+      icon: '🎵',
+      category: 'FarMar'
+    },
 
 
     //Go Ags
     {
-      name: 'Horse rider',
-      icon: '🏇',
-      category: 'Go Ags'
-    },
-    {
-      name: 'graduation cap',
-      icon: '🎓',
-      category: 'Go Ags'
-    },
-    {
-      name: 'Football',
-      icon: '🏈',
-      category: 'Go Ags'
-    },
-    {
-      name: 'swimming',
-      icon: '🏊',
-      category: 'Go Ags'
-    },
-    {
       name: 'cow',
       icon: '🐄',
+      category: 'Go Ags'
+    },
+    {
+      name: 'turkey',
+      icon: '🦃',
+      category: 'Go Ags'
+    },
+    {
+      name: 'squirrel',
+      icon: '🐿️',
       category: 'Go Ags'
     },
     {
@@ -140,8 +130,13 @@ export const emojis = [
       category: 'Go Ags'
     },
     {
-      name: 'cyclist',
-      icon: '🚴',
+      name: 'horse face',
+      icon: '🐴',
+      category: 'Go Ags'
+    },
+    {
+      name: 'horse rider',
+      icon: '🏇',
       category: 'Go Ags'
     },
     {
@@ -150,13 +145,18 @@ export const emojis = [
       category: 'Go Ags'
     },
     {
-      name: 'scooter',
-      icon: '🛴',
+      name: 'sunflower',
+      icon: '🌻',
       category: 'Go Ags'
     },
     {
-      name: 'scooter',
-      icon: '🛵',
+      name: 'allergies',
+      icon: '🤧',
+      category: 'Go Ags'
+    },
+    {
+      name: 'cowboy',
+      icon: '🤠',
       category: 'Go Ags'
     },
     {
@@ -165,39 +165,44 @@ export const emojis = [
       category: 'Go Ags'
     },
     {
-      name: 'horse',
-      icon: '🐴',
+      name: 'grad cap',
+      icon: '🎓',
       category: 'Go Ags'
     },
     {
-      name: 'horse',
-      icon: '🦓',
+      name: 'football',
+      icon: '🏈',
       category: 'Go Ags'
     },
 
     //Midterm szn
     {
-      name: 'Binder',
+      name: 'tired',
+      icon: '😴',
+      category: 'Midterm Szn'
+    },
+    {
+      name: 'crying',
+      icon: '😭',
+      category: 'Midterm Szn'
+    },
+    {
+      name: 'anxiety',
+      icon: '😰',
+      category: 'Midterm Szn'
+    },
+    {
+      name: 'binder',
       icon: '📒',
       category: 'Midterm Szn'
     },
     {
-      name: 'Composition Book',
+      name: 'composition book',
       icon: '📓',
       category: 'Midterm Szn'
     },
     {
-      name: 'red notebook',
-      icon: '📕',
-      category: 'Midterm Szn'
-    },
-    {
-      name: 'green notebook',
-      icon: '📗',
-      category: 'Midterm Szn'
-    },
-    {
-      name: 'blue notebook',
+      name: 'notebook',
       icon: '📘',
       category: 'Midterm Szn'
     },
@@ -207,7 +212,7 @@ export const emojis = [
       category: 'Midterm Szn'
     },
     {
-      name: 'pencil and paper',
+      name: 'paper',
       icon: '📝',
       category: 'Midterm Szn'
     },
@@ -225,21 +230,21 @@ export const emojis = [
     },
     {
       name: 'wind',
-      icon: '🌬',
+      icon: '💨',
       category: 'DD'
     },
     {
-      name: 'rain cloud',
+      name: 'raining',
       icon: '🌧',
       category: 'DD'
     },
     {
-      name: 'sun and r',
-      icon: '🌦',
+      name: 'covid-19',
+      icon: '🦠',
       category: 'DD'
     },
     {
-      name: 'Bear',
+      name: 'bear',
       icon: '🐻',
       category: 'DD'
     },
@@ -249,31 +254,42 @@ export const emojis = [
       category: 'DD'
     },
     {
-      name: 'No bike',
+      name: 'machete',
+      icon: '🔪',
+      category: 'DD'
+    },
+    {
+      name: 'clown',
+      icon: '🤡',
+      category: 'DD'
+    },
+    {
+      name: 'cookie',
+      icon: '🍪',
+      category: 'DD'
+    },
+    {
+      name: 'bike theft',
       icon: '🚳',
       category: 'DD'
     },
-    {
-      name: 'Wind',
-      icon: '💨',
-      category: 'DD'
-    },
 
+
+    // Picnic Day:
     {
-      name: 'Beer',
+      name: 'beer',
       icon: '🍻',
       category: 'Picnic Day'
     },
     {
-      name: 'Dancing',
+      name: 'dancing',
       icon: '👯🏿‍♀️',
       category: 'Picnic Day'
     },
     {
-      name: 'Beer',
-      icon: '🍺',
+      name: 'celebrate',
+      icon: '🥳',
       category: 'Picnic Day'
-    },
-    
+    }
     
   ];
