@@ -19,7 +19,6 @@
         <button class="tablinks" (click)="openTab('Midterm Szn')">Midterm Szn</button>
         <button class="tablinks" (click)="openTab('Davis Disasters')">Davis Disasters</button>
         <button class="tablinks" (click)="openTab('Picnic Day')">Picnic Day</button>
-        <button class="tablinks" (click)="openTab('Farm')">Farm</button>
     </div>
 </div>
 
@@ -35,6 +34,7 @@
 </div>
 
 <div id="FarMar" class="tabcontent">
+    <h3>FarMar</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'FarMar'">
@@ -45,6 +45,7 @@
 </div>
 
 <div id="Midterm Szn" class="tabcontent">
+    <h3>Midterm Szn</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'Midterm Szn'">
@@ -55,6 +56,7 @@
 </div>
 
 <div id="Go Ags" class="tabcontent">
+    <h3>Go Ags</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'Go Ags'">
@@ -65,38 +67,20 @@
 </div>
 
 
-<div id="Farm" class="tabcontent">
+
+<div id="Picnic Day" class="tabcontent">
+    <h3>Picnic Day</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
-            <div *ngIf = "emoji.category == 'Farm'">
+            <div *ngIf = "emoji.category == 'Picnic Day'">
                 <button [title]="emoji.name" [id]="emoji.name" class="emoji" (click)="copyEmoji(emoji.name)">{{ emoji.icon }}</button>
             </div>
         </ng-container>
     </div>
 </div>
 
-
-<div id="School" class="tabcontent">
-    <div>
-        <button id = "horse" class="emoji" (click)="copyEmoji('horse')">🐴</button>
-        <button id = "bikini" class="emoji" (click)="copyEmoji('bikini')">👙</button>
-        <button id = "hand" class="emoji" (click)="copyEmoji('hand')">✍</button>
-        <button id = "coffee" class="emoji" (click)="copyEmoji('coffee')">☕</button>
-    </div>
-</div>
-
-<div id="Picnic Day" class="tabcontent">
-    <h3>Picnic Day</h3>
-    <div>
-        <button id = "horse" class="emoji" (click)="copyEmoji('smile')">🐴</button>
-        <button id = "bikini" class="emoji" (click)="copyEmoji('smile')">👙</button>
-        <button id = "hand" class="emoji" (click)="copyEmoji('smile')">✍</button>
-        <button id = "coffee" class="emoji" (click)="copyEmoji('smile')">☕</button>
-    </div>
-</div>
-
 <div id="Davis Disasters" class="tabcontent">
-    <h3>Farm animals</h3>
+    <h3>Davis Disasters</h3>
     <div class = "wrapper">
         <ng-container *ngFor= "let emoji of emojis">
             <div *ngIf = "emoji.category == 'Davis Disasters'">
