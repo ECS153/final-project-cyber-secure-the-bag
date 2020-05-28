@@ -29,6 +29,8 @@ export const emojis = [
       icon: '😅',
       category: 'Faces',
     },
+
+    //FarMar
     {
       name: 'horse',
       icon: '🐴',
@@ -105,6 +107,8 @@ export const emojis = [
       category: 'FarMar'
     },
 
+
+    //Go Ags
     {
       name: 'Horse rider',
       icon: '🏇',
@@ -159,9 +163,19 @@ export const emojis = [
       name: 'skateboard',
       icon: '🛹',
       category: 'Go Ags'
-    }
+    },
+    {
+      name: 'horse',
+      icon: '🐴',
+      category: 'Go Ags'
+    },
+    {
+      name: 'horse',
+      icon: '🦓',
+      category: 'Go Ags'
+    },
 
-    ,
+    //Midterm szn
     {
       name: 'Binder',
       icon: '📒',
@@ -198,8 +212,68 @@ export const emojis = [
       category: 'Midterm Szn'
     },
     {
-      name: 'sleep',
-      icon: '🛌',
+      name: 'no phone',
+      icon: '📵',
       category: 'Midterm Szn'
-    }
+    },
+
+    // Davis Disaster
+    {
+      name: 'tornado',
+      icon: '🌪',
+      category: 'DD'
+    },
+    {
+      name: 'wind',
+      icon: '🌬',
+      category: 'DD'
+    },
+    {
+      name: 'rain cloud',
+      icon: '🌧',
+      category: 'DD'
+    },
+    {
+      name: 'sun and r',
+      icon: '🌦',
+      category: 'DD'
+    },
+    {
+      name: 'Bear',
+      icon: '🐻',
+      category: 'DD'
+    },
+    {
+      name: 'fire',
+      icon: '🔥',
+      category: 'DD'
+    },
+    {
+      name: 'No bike',
+      icon: '🚳',
+      category: 'DD'
+    },
+    {
+      name: 'Wind',
+      icon: '💨',
+      category: 'DD'
+    },
+
+    {
+      name: 'Beer',
+      icon: '🍻',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'Dancing',
+      icon: '👯🏿‍♀️',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'Beer',
+      icon: '🍺',
+      category: 'Picnic Day'
+    },
+    
+    
   ];
