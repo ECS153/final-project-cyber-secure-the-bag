@@ -1,31 +1,30 @@
 
-<!-- export class Site {
-  site_name: string;
-  fields: Map<string, string[]>;
-}
-
-export class Data {
-  user: string;
-  sites: Site[];
-} -->
-
-
-
-<table class="redTable">
-    <thead>
-      <th>User</th>
-      <th>Site Name</th>
-      <th>Fields: Most Likely Value</th>
-    </thead>
-    <tbody *ngFor="let data of allData">
-      <tr *ngFor = "let site of data.sites">
-        <td>{{data.user}}</td>
-        <td>{{site.site_name}}</td>
-        <td>
-          <div *ngFor = "let field of site.likely_fields.keys()">
-            {{field}}: {{site.likely_fields.get(field)}} ({{site.field_percentage.get(field)}}%)
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<table class="redTable" *ngFor="let data of allData">
+  <thead>
+    <th (click) = "toggleSites(data)" style = "cursor: pointer; width: 100px;">
+      <p *ngIf = "data.show">
+        Hide
+      </p>
+      <p *ngIf = "!data.show">
+        Show
+      </p>
+    </th>
+    <th colspan = "2" style = "width: 200px">User #{{data.user}}</th>
+    <th style = "width: 400px">Average Percentage: {{data.average_percentage}}%</th>
+  </thead>
+  <tbody *ngFor = "let site of data.shown_sites">
+    <tr> 
+      <th>{{site.site_name}} </th>
+      <th>Field Tag</th>
+      <th>Strongest Match</th>
+      <th>Percent Match</th>
+    </tr>
+    <tr *ngFor = "let field of site.likely_fields.keys()" >
+      <td></td>
+      <td>{{field}}</td>
+      <td>{{site.likely_fields.get(field)}}</td>
+      <td>{{site.field_percentage.get(field)}}%</td>
+    </tr>
+  </tbody>
+  <br>
+</table>
