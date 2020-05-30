@@ -11,6 +11,7 @@ import { stringify } from 'querystring';
 export class DataListComponent implements OnInit {
 
   allData: Data[];
+  showUser: Boolean[];
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -23,6 +24,7 @@ export class DataListComponent implements OnInit {
           let s = new Site()
           s.fields = new Map()
           s.site_name = site_name
+          s.show = false;
           s.likely_fields = new Map()
           s.field_percentage = new Map()
           for(let i in data[site_name]){
@@ -37,20 +39,44 @@ export class DataListComponent implements OnInit {
             }
           }
 
+          let average = 0;
+          let count = 0;
           for(let field_key of s.fields.keys()){
             let possible_values = s.fields.get(field_key)
             console.log(possible_values)
             let m = mode(possible_values)
             s.likely_fields.set(field_key, m[0])
-            s.field_percentage.set(field_key, Math.round(m[1]*10000)/100)
+            let value = Math.round(m[1]*10000)/100
+            s.field_percentage.set(field_key, value)
+            average = average + value;
+            count = count + 1
           } 
+          if(count > 0){
+            s.average_percentage = average/count;
+          } else {
+            s.average_percentage = 100;
+          }
           console.log(s)
           sites.push(s)
         }
 
+        let average = 0;
+        let count = 0;
+        for(let site of sites) {
+          average = average + site.average_percentage;
+          count = count + 1;
+        }
+        if (count == 0){
+          average = 100;
+          count = 1
+        }
+
         return {
           user: id,
-          sites: sites
+          sites: sites,
+          show: false,
+          average_percentage: Math.round(average/count*100)/100,
+          shown_sites: []
           
         } as Data;
       });
@@ -66,6 +92,15 @@ export class DataListComponent implements OnInit {
   }
 
   
+  toggleSites(data: Data){
+    if(data.show){
+      data.shown_sites = [];
+      data.show = false;
+    } else {
+      data.shown_sites = data.sites;
+      data.show = true;
+    }
+  }
 }
 
 function mode(array){
