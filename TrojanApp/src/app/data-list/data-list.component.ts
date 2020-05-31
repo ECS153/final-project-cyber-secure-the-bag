@@ -43,7 +43,6 @@ export class DataListComponent implements OnInit {
           let count = 0;
           for(let field_key of s.fields.keys()){
             let possible_values = s.fields.get(field_key)
-            console.log(possible_values)
             let m = mode(possible_values)
             s.likely_fields.set(field_key, m[0])
             let value = Math.round(m[1]*10000)/100
@@ -56,7 +55,6 @@ export class DataListComponent implements OnInit {
           } else {
             s.average_percentage = 100;
           }
-          console.log(s)
           sites.push(s)
         }
 
