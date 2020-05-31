@@ -106,6 +106,21 @@ export const emojis = [
       icon: '🎵',
       category: 'FarMar'
     },
+    {
+      name: 'dumpling',
+      icon: '🥟',
+      category: 'FarMar'
+    },
+    {
+      name: 'crossant',
+      icon: '🥐',
+      category: 'FarMar'
+    },
+    {
+      name: 'cheese',
+      icon: '🧀',
+      category: 'FarMar'
+    },
 
 
     //Go Ags
@@ -174,6 +189,31 @@ export const emojis = [
       icon: '🏈',
       category: 'Go Ags'
     },
+    {
+      name: 'baseball',
+      icon: '⚾️',
+      category: 'Go Ags'
+    },
+    {
+      name: 'softball',
+      icon: '🥎',
+      category: 'Go Ags'
+    },
+    {
+      name: 'basketball',
+      icon: '🏀',
+      category: 'Go Ags'
+    },
+    {
+      name: 'lacross',
+      icon: '🥍',
+      category: 'Go Ags'
+    },
+    {
+      name: 'tennis',
+      icon: '🎾',
+      category: 'Go Ags'
+    },
 
     //Midterm szn
     {
@@ -219,6 +259,21 @@ export const emojis = [
     {
       name: 'no phone',
       icon: '📵',
+      category: 'Midterm Szn'
+    },
+    {
+      name: 'professor',
+      icon: '👩‍🏫',
+      category: 'Midterm Szn'
+    },
+    {
+      name: 'Professor',
+      icon: '👨‍🏫',
+      category: 'Midterm Szn'
+    },
+    {
+      name: 'graduation',
+      icon: '🎓',
       category: 'Midterm Szn'
     },
 
@@ -289,6 +344,83 @@ export const emojis = [
     {
       name: 'celebrate',
       icon: '🥳',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'celebrate',
+      icon: '🎉',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'celebrate',
+      icon: '🐄',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'celebrate',
+      icon: '🤠',
+      category: 'Picnic Day'
+    }
+    ,
+    {
+      name: 'celebrate',
+      icon: '🍷',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'celebrate',
+      icon: '🍾',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'celebrate',
+      icon: '🍺',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'celebrate',
+      icon: '🍶',
+      category: 'Picnic Day'
+    }
+    ,
+    {
+      name: 'celebrate',
+      icon: '☀️',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'hot',
+      icon: '🥵',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'hot',
+      icon: '😎',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'hot',
+      icon: '👨‍👩‍👧‍👧',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'hot',
+      icon: '🐴',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'hot',
+      icon: '🧬',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'hot',
+      icon: '🙋‍♂️',
+      category: 'Picnic Day'
+    },
+    {
+      name: 'hot',
+      icon: '🙋‍♀️',
       category: 'Picnic Day'
     }
     
