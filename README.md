@@ -7,7 +7,7 @@ To implement our Trojan extension, we used:
       - All `keyup` and `mouseup` actions and saves associated HTML elements in an `Object` as keys. 
       - Records all keys typed in a page (including backspaces, copy/paste) using `onkeypress` and `onkeydown` event listeners, and saves them in the `Object` as values (mapped to their respective HTML elements)
       - Sends `Object` to our background script `background.ts` through message passing on page `unload`
-   * `src/background.js`: A background script which saves relevant keylogged data to local storage
+   * `src/background.ts`: A background script which saves relevant keylogged data to local storage
       - listens for an `Object` to be sent via message passing from the content script
       - if the current URL is one of interest, saves a new `Object` to local storage that maps the current site to the keylogger `Object`
 2. The database we will use is the Cloud Firestore database supported by the Google Firebase environment.
